@@ -166,6 +166,7 @@
                 <p style="text-align:center;">
                     <image src="img/DAEM.png" height="100px" class="img-responsive">
                 </p>
+
             </div>
         </div>
             
@@ -174,49 +175,43 @@
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Mip-NeRF
+                    Triot: Training-as-Init, Optimizing-for-Tuning
                 </h3>
                 <p class="text-justify">
-                    We use integrated positional encoding to train NeRF to generate anti-aliased renderings. Rather than casting an infinitesimal ray through each pixel, we instead cast a full 3D <em>cone</em>. For each queried point along a ray, we consider its associated 3D conical frustum. Two different cameras viewing the same point in space may result in vastly different conical frustums, as illustrated here in 2D:
+                    We present a novel learning method, `Training-as-Init, Optimizing-for-Tuning' (Triot), combining the model-training and latent-optimizing method for the attribute-editing task.
                 </p>
                 <p style="text-align:center;">
-                    <image src="img/scales_toy.png" class="img-responsive" alt="scales">
+                    <image src="img/Triot.png" class="img-responsive" alt="scales">
                 </p>
                 <p class="text-justify">
-                    In order to pass this information through the NeRF network, we fit a multivariate Gaussian to the conical frustum and use the integrated positional encoding described above to create the input feature vector to the network. 
+                     In detail, we take the edited latent vector for target attributes as init, fix the entire model, then optimize the latent vector with the proposed consistency losses to search for better latent code.
                 </p>
             </div>
         </div>
-            
-
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Results
                 </h3>
-                <p class="text-justify">
-                    We train NeRF and mip-NeRF on a dataset with images at four different resolutions. Normal NeRF (left) is not capable of learning to represent the same scene at multiple levels of detail, with blurring in close-up shots and aliasing in low resolution views, while mip-NeRF (right) both preserves sharp details in close-ups and correctly renders the zoomed-out images.
-                </p>                
                 <br>
                 <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/ship_sbs_path1.mp4" type="video/mp4" />
+                  <source src="img/0_0_0.mp4" type="video/mp4" />
                 </video>
                 <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/chair_sbs_path1.mp4" type="video/mp4" />
+                  <source src="img/0_0_0.mp4" type="video/mp4" />
                 </video>
                 <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/lego_sbs_path1.mp4" type="video/mp4" />
+                  <source src="img/0_0_0.mp4" type="video/mp4" />
                 </video>
                 <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/mic_sbs_path1.mp4" type="video/mp4" />
+                  <source src="img/0_0_0.mp4" type="video/mp4" />
                 </video>
                 <br><br>
                 <p class="text-justify">
-                    We can also manipulate the integrated positional encoding by using a larger or smaller radius than the true pixel footprint, exposing the continuous level of detail learned within a single network:
                 </p>     
                 <video id="v0" width="100%" autoplay loop muted controls>
-                  <source src="img/lego_radii_manip_slider_200p.mp4" type="video/mp4" />
+                  <source src="img/0_0_0.mp4" type="video/mp4" />
                 </video>
             </div>
         </div>
