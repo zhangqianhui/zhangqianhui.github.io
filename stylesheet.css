@@ -306,3 +306,39 @@ body{
 :root{
   --container: 980px;   /* 你想要的统一宽度：800/900/980 都行 */
 }
+
+
+/* ===== Publications typography ===== */
+.description-column{
+  font-size: 15px;           /* 整体略放大 */
+  line-height: 1.6;
+}
+
+.paper_title{
+  font-size: 17px;           /* 标题更醒目 */
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.paper_authors{
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.paper_venue{
+  font-size: 15px;
+  margin: 4px 0 6px;
+}
+
+.paper_materials{
+  font-size: 14px;           /* 链接稍小但不挤 */
+  margin-top: 4px;
+}
+
+/* 链接间距好看点 */
+.paper_materials .link{
+  display: inline-block;
+  margin-right: 10px;
+}
+
+
