@@ -346,3 +346,15 @@ td p{
   font-size: 15.5px;
   line-height: 1.65;
 }
+
+.bullet-list{
+  margin: 10px 0 0;
+  padding-left: 18px;   /* 黑点缩进 */
+  font-size: 15.5px;    /* 你之前说字体小，这里顺便放大 */
+  line-height: 1.7;
+}
+
+.bullet-list li{
+  margin: 4px 0;
+}
+
