@@ -297,7 +297,12 @@ body{
 }
 
 /* 你原来的table不要再自己顶到边上 */
-.page-card > table{
-  margin: 0 auto;
+.page-card{
+  max-width: var(--container);
+  /* 其它不变 */
 }
 
+
+:root{
+  --container: 980px;   /* 你想要的统一宽度：800/900/980 都行 */
+}
